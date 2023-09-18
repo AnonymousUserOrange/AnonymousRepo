@@ -1,0 +1,12 @@
+LogOracle/dataset.zip
+LogOracle/dataset
+LogOracle/LEAM/checkpointSearch
+.DS_Store/
+.idea
+.vscode
+.history
+.VSCodeCounter
+__pycache__/
+LogOracle/result
+LogOracle/model
+LogOracle/runs
