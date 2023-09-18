@@ -6,7 +6,7 @@ This repository is the basic implementation of our test oracle generation approa
 
 - [Description](https://github.com/AnonymousUserOrange/AnonymousRepo#description)
 - [Structure](https://github.com/AnonymousUserOrange/AnonymousRepo#structure)
-- [Datasets](https://github.com/AnonymousUserOrange/AnonymousRepo#datasets&results)
+- [Datasets](https://github.com/AnonymousUserOrange/AnonymousRepo#datasets-and-results)
 - [Environment](https://github.com/AnonymousUserOrange/AnonymousRepo#environment)
 - [Reproducibility](https://github.com/AnonymousUserOrange/AnonymousRepo#reproducibility) 
 
@@ -28,7 +28,7 @@ LogOracle
 ├─ utils/      
 └─ run.py       # Main entrance code.
 ```
-### Datasets&Results
+### Datasets and Results
 
 We use 3 popular open-source Java subjects which have been widely used in many existing studies and results for all the oracles generated are shown in the following table corresponding to the submission.
 
@@ -89,7 +89,7 @@ Example: `python run.py --phase test --module rocketmq/acl`
 - [Project Structure](https://github.com/AnonymousUserOrange/AnonymousRepo#project-structure)
   - [Sample Input Data](https://github.com/AnonymousUserOrange/AnonymousRepo#sample-input-data)
 
-- [Environment](https://github.com/AnonymousUserOrange/AnonymousRepo#environment)
+- [Environment](https://github.com/AnonymousUserOrange/AnonymousRepo#environments)
 - [Experiment Replication](https://github.com/AnonymousUserOrange/AnonymousRepo#experiment-replication) 
 - [Randomness](https://github.com/AnonymousUserOrange/AnonymousRepo#randomness)
 
@@ -141,7 +141,7 @@ For ease of understanding, we explain each file in the directory  `./dataset/inp
 
 Due to the general framework of our approach, as long as above information is constructed into the files in the `./dataset/input/<project>/<module>` folder according to the corresponding format, it is easy to apply LogTCP on such subjects. 
 
-### Environment
+### Environments
 
 Key Packages:
 
@@ -171,7 +171,7 @@ Example: `python pipeline.py --project shiro --module core --logs_representation
 
 We provide our prioritization results for the subject `Shiro-core` as an example in the  `./dataset/process/shiro/core/example_prioritize_results/` [folder](https://github.com/AnonymousUserOrange/AnonymousRepo/tree/main/dataset/process/shiro/core/example_prioritize_results) while the prioritization results for other subjects are shown in the following picture corresponding to the submission.
 
-![avatar](https://github.com/AnonymousUserOrange/AnonymousRepo/blob/main/Effectiveness.png)
+![avatar](https://github.com/AnonymousUserOrange/AnonymousRepo/blob/main/LogTCP/Effectiveness.png)
 
 You may not get the same results while reproducing the experiments due to the randomness which stems from the following points:
 
