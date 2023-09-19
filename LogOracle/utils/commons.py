@@ -13,27 +13,7 @@ from data.GetLog import get_pure_templates, get_unduplicated_templates, load_tem
 from data.LogEmbedding import get_template_vec, get_token_embedding, get_logs_embedding
 from data.TraceEmbedding import get_trace_embedding, get_trace_event_embedding, get_tree_embedding
 from data.vocab import CharVocab
-from utils.instance import Instance, TensorInstance
 
-def generate_tensor(instance: Instance, config, char_vocab):
-    char_seq_len = config.char_seq_max_len
-    inputs_seq_len = config.context_max_len
-
-    tinst = TensorInstance(inputs_seq_len, char_seq_len)
-    for seq_id, token in enumerate(instance.tokens):
-        if seq_id >= inputs_seq_len:
-            break
-        for char_seq_id, char in enumerate(token):
-            if char_seq_id >= char_seq_len:
-                break
-            char_id = char_vocab.char2id(char)
-            tinst.input_context_char_seq[seq_id][char_seq_id] = char_id
-
-        tinst.input_context_mask[seq_id] = False
-    
-    tinst.targets = torch.tensor(instance.label)
-
-    return tinst
     
 class rawData(Dataset):
     def __init__(self, args, config, my_logger):
